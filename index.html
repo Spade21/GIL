@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KENT</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        @media (max-width: 600px) {
+            
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dear Myra,</h1>
+        <p>I hope this message finds you well.</p>
+        <p>Best regards,</p>
+        <p>Kentty</p>
+        <button onclick="toggleMessage()">Click me</button>
+    </div>
+    
+    <script>
+        let showMessage = false;
+
+        function toggleMessage() {
+            showMessage = !showMessage;
+            var messageElement = document.getElementById("message");
+
+            if (showMessage) {
+                if (!messageElement) {
+                    messageElement = document.createElement("p");
+                    messageElement.id = "message";
+                    document.querySelector(".container").appendChild(messageElement);
+                }
+                messageElement.innerHTML = "My dearest, my brightest star, <br> Though miles apart, you shine from afar. <br> A light so warm, a heart so true, <br> I find myself drawn closer to you. <br> <br> Your beauty is more than eyes can see, <br> It's in your laughter, wild and free. <br> In the way you speak, so soft, so kind, <br> A voice that lingers in my mind. <br> <br> I watch from here, though far away, <br> Dreaming of words I wish to say. <br> But dreams alone are not enough, <br> I want to prove my love is tough. <br> <br> So I will build, I will strive, <br> To be a man who stands alive, <br> With strength to hold, with arms so sure, <br> A love that's steady, deep, and pure. <br> <br> But if your heart has found its place, <br> In someone else’s warm embrace, <br> Then tell me true, don’t let me stay, <br> If love has found another way. <br> <br> Still, I will walk the path ahead, <br> With hope, with love, with words unsaid. <br> And if one day, you wait for me, <br> Then I’ll be all I dream to be. <br> <br> But if your heart belongs elsewhere, <br> I’ll smile and leave my love with care. <br> For more than having, more than fate, <br> I wish for you a love so great. <br> <br> Until that day, until I stand, <br> As the man I wish, with steady hand, <br> Know that in my heart, you stay, <br> Through every night, through every day. <br> <br> Forever yours, from far but near, <br> With love so true, with hope sincere." ;
+            } else {
+                if (messageElement) {
+                    messageElement.remove();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
